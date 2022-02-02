@@ -53,8 +53,8 @@ manifest-release:
 	docker manifest push $(IMAGE):v$(RELEASE)
 	docker manifest create -a $(IMAGE):$(RELEASE) $(foreach PLATFORM,$(DOCKER_PLATFORMS),$(IMAGE):$(VERSION)_$(subst /,_,$(PLATFORM)))
 	docker manifest push $(IMAGE):$(RELEASE)
-	docker manifest create -a $(IMAGE):latest $(foreach PLATFORM,$(DOCKER_PLATFORMS),$(IMAGE):$(VERSION)_$(subst /,_,$(PLATFORM)))
-	docker manifest push $(IMAGE):latest
+# 	docker manifest create -a $(IMAGE):latest $(foreach PLATFORM,$(DOCKER_PLATFORMS),$(IMAGE):$(VERSION)_$(subst /,_,$(PLATFORM)))
+# 	docker manifest push $(IMAGE):latest
 
 .PHONY: docker-manifest
 docker-manifest: manifest-version manifest-release
