@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         restic:
-          - "0.12.1"
+          - "0.13.0"
     steps:
       - uses: actions/checkout@v1
 
