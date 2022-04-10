@@ -3,7 +3,7 @@ SHELL=/bin/bash -o pipefail
 REGISTRY   ?= stashed
 BIN        := restic
 IMAGE      := $(REGISTRY)/$(BIN)
-RELEASE    ?= 0.13.0
+RELEASE    ?= 0.13.1
 VERSION    ?= v$(RELEASE)
 SRC_REG    ?=
 
