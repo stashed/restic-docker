@@ -7,7 +7,7 @@ RELEASE    ?= 0.13.1
 VERSION    ?= v$(RELEASE)
 SRC_REG    ?=
 
-DOCKER_PLATFORMS := linux/amd64 linux/386 linux/arm64 linux/ppc64le linux/s390x
+DOCKER_PLATFORMS := linux/amd64 linux/386 linux/arm64 linux/s390x
 PLATFORM         ?= $(firstword $(DOCKER_PLATFORMS))
 TAG              = $(VERSION)_$(subst /,_,$(PLATFORM))
 
